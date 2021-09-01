@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+    
+ 
+    
+<title>Menus</title>
+ 
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+<!--
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+
+-->
+
+
+
+	
+ <!-- load jquery to use for external json loading -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- load React - note when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- load babel transpiler to convert React's JSX markup to pure JavaScript
+       Note: we only need babel loaded in the browser if we are not using a build system 
+       where babel would save pure JS files to be loaded by the browser instead -->
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+
+
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="document.body.style.opacity='1'"> 
+
+
+	<!-- create an element that can be the root element for your react application -->
+
+  <h1 style="text-align: center">Menu</h1>
+	<div id="myApp"></div>
+
+  <!-- load our custom script with react component -->
+  <script type="text/babel">
+  "use strict";
+   function ProjectList(props) {
+   return <div class="list-group list-group-flush">
+            {
+              props.list.map( 
+                (item,index) => (
+                <a href={item.url} title={item.category} class="list-group-item list-group-item-action text-center">{item.category}</a>
+                )
+              )
+            }
+      </div>
+   }
+  
+  
+  $.getJSON("myData", function(jsonFromJquery) {
+    ReactDOM.render(
+      <ProjectList list={jsonFromJquery} />,
+      document.getElementById("myApp")
+    );
+  }
+  );
+    
+    
+
+  </script>
+	
+ 
+ 
+	
+ 
+ 
+
+</body>
+</html>

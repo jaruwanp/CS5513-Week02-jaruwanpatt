@@ -1,0 +1,34 @@
+[
+    {
+        "category":"Drinks",
+        "url":"drinks.html"
+    },
+    {
+        "category":"Starters",
+        "url":"starters.html"
+    },
+    {
+        "category":"Sushi Bar Menu",
+        "url":"shushi.html"
+    },
+     {
+        "category":"Hot Kitchen Menu",
+        "url":"kitchen_menu.html"
+    },
+     {
+        "category":"Dinner Combinations",
+        "url":"dinner_combo.html"
+    },
+     {
+        "category":"Kids' Menu",
+        "url":"kids_menu.html"
+    },
+     {
+        "category":"Vegetarian Selections",
+        "url":"vegetarian.html"
+    },
+     {
+        "category":"Desserts",
+        "url":"desserts.html"
+    } 
+]
